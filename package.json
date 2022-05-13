@@ -1,11 +1,12 @@
 {
   "name": "rrea-client",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint --fix src/*.{ts,vue} && eslint --fix src/**/*.{ts,vue}"
   },
   "dependencies": {
     "vue": "^3.2.25"

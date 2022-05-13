@@ -2,7 +2,7 @@
   <!-- ヘーダ -->
   <section :class="{ 'bg-gray-900': isDark }" class="flex justify-between items-center sm:px-8 px-5 py-4">
     <div class="font-extrabold text-2xl">
-      <a href="/"><span :class="{ 'text-gray-200': isDark }">RreaC</span><span class="text-yellow-300">3</span></a>
+      <a href="/"><span :class="{ 'text-gray-200': isDark }">RreaC</span><span class="text-yellow-300">1</span></a>
     </div>
 
     <div class="flex flex-row items-center">
@@ -55,11 +55,11 @@
         <label for="toggle" class="flex items-center cursor-pointer">
           <div class="relative">
             <!-- input -->
-            <input v-model="isDark" type="checkbox" id="toggle" class="sr-only" />
+            <input id="toggle" v-model="isDark" type="checkbox" class="sr-only" />
             <!-- line -->
-            <div class="block bg-slate-700 w-10 h-6 rounded-full"></div>
+            <div class="block bg-slate-700 w-10 h-6 rounded-full" />
             <!-- dot -->
-            <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"></div>
+            <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition" />
           </div>
         </label>
       </div>
@@ -67,8 +67,8 @@
       <!-- GitHub https://www.tailwindtoolbox.com/icons -->
       <button
         type="button"
-        @click="jump()"
         class="flex items-center px-4 py-1 ml-2 font-medium shadow-sm hover:shadow bg-yellow-200 rounded-md hover:bg-yellow-300"
+        @click="jump()"
       >
         <span>
           <svg
@@ -104,7 +104,7 @@
   })
 
   // リンク
-  const GitHub: string = ''
+  const GitHub = ''
   const jump = (): void => {
     window.location.href = GitHub
   }

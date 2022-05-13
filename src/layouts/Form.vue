@@ -38,8 +38,8 @@
         <div class="c3-form-title">氏名：</div>
         <div v-for="item in forms.name" :key="item.value">
           <input
-            v-model="params.nameCode"
             :id="item.text"
+            v-model="params.nameCode"
             class="hidden peer"
             name="name"
             type="checkbox"
@@ -54,8 +54,8 @@
         <div class="c3-form-title">職務：</div>
         <div v-for="item in forms.job" :key="item.value">
           <input
-            v-model="params.jobCode"
             :id="item.text"
+            v-model="params.jobCode"
             class="hidden peer"
             name="job"
             type="checkbox"
@@ -70,8 +70,8 @@
         <div class="c3-form-title">種族：</div>
         <div v-for="item in forms.race" :key="item.value">
           <input
-            v-model="params.raceCode"
             :id="item.text"
+            v-model="params.raceCode"
             class="hidden peer"
             name="race"
             type="checkbox"
@@ -134,7 +134,7 @@
   const { bgColorCreator } = useHooks()
 
   // 定数、変数定義
-  const timer: number = 10000
+  // const timer = 10000
   let isOnline = ref<boolean>(true)
 
   // form リクエスト
