@@ -42,7 +42,3 @@ yarn dev
 ```bash
 yarn build
 ```
-
-### 最後
-
-Enjoy !
