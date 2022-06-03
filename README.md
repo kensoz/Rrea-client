@@ -1,19 +1,26 @@
-# Rrea Client（C1）
+# Rrea-Client（C1）
 
-Rrea Client その看板バージョン、一番使いこなすスタック、Vue.jsとTailwindCSSで構築し、公開している
-Dockerコンテンツも使い、TODO
+![a Vue.js Project](https://img.shields.io/badge/Vue.js-Front--End-fcd34d.svg?logo=vue.js&style=flat-square)　![License](https://img.shields.io/badge/License-MIT-0284c7.svg?logo=&style=flat-square)
 
-ホームページ：
-バックエンドGitHub：
-Rrea Client Collection GitHub：
+Demo:  **[Client]() | [Admin]()**     GitHub:  **[Server]() | [Admin]() | [Client-Collection]()**
 
-### メイン機能
+##### Rrea-Client とは
 
-+ 情報表示
+メンバー位置と情報の管理システムのフロントエンドです。\
+FEとBEをわけて開発し、[APIサーバ(Server]())、メンバー用サイト(Client)、[管理者用サイト(Admin)]()に分けている仕組みです。
+
+一番使いこなすVue.jsとTailwindCSSで構築し、デフォルトのClientサイトとして公開しましたが、\
+React.js, Svelte.jsなどで開発した[プロジェクト]()もありますので。ご覧いただけますと幸いです。
+
+##### メイン機能
+
++ メンバー位置と情報を表示
 + レスポンシブ対応
 + ダークモード
 
-### スタック
+
+
+## スタック
 
 + ⚡️ Vue.js 3 (Composition API)
 + ⚙️ TypeScript
@@ -23,21 +30,25 @@ Rrea Client Collection GitHub：
 + 📦 Yarn
 + 🔺 RESTful API
 
-### 使用
 
-###### インストール
+
+## 使用
+
+##### インストール
 
 ```bash
 yarn install
 ```
 
-###### 開発
+##### 開発
+
+http://localhost:3000で起動
 
 ```bash
 yarn dev
 ```
 
-###### コンパイラ
+##### ビルド
 
 ```bash
 yarn build
