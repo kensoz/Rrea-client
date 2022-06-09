@@ -1,15 +1,15 @@
 <template>
   <!-- ヘーダ -->
   <section :class="{ 'bg-gray-900': isDark }" class="flex justify-between items-center sm:px-8 px-5 py-4">
-    <div class="font-extrabold text-2xl">
-      <a href="/"><span :class="{ 'text-gray-200': isDark }">RreaC</span><span class="text-yellow-300">1</span></a>
+    <div class="w-40">
+      <img src="/logo.png" alt="logo" />
     </div>
 
     <div class="flex flex-row items-center">
       <!-- ネットワーク状態 https://heroicons.com/ -->
       <svg
         :class="isOnline ? 'fill-emerald-400' : 'fill-rose-400'"
-        class="h-7 w-7 mt-1 mr-1"
+        class="h-7 w-7 mt-1 mr-0.5 sm:mr-1"
         fill="none"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@
       <div>
         <svg
           v-if="isDark"
-          class="h-6 w-6 mt-1 mr-0.5 fill-amber-400"
+          class="h-6 w-6 mt-1 mr-0.5 sm:mr-1 fill-amber-400"
           fill="none"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@
 
         <svg
           v-else
-          class="h-6 w-6 mt-1 mr-0.5 fill-amber-400"
+          class="h-6 w-6 mt-1 mr-0.5 sm:mr-1 fill-amber-400"
           fill="none"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@
         </svg>
       </div>
 
-      <div class="flex items-center justify-center mr-3">
+      <div class="flex items-center justify-center mr-0.5 sm:mr-1">
         <label for="toggle" class="flex items-center cursor-pointer">
           <div class="relative">
             <!-- input -->
@@ -67,7 +67,7 @@
       <!-- GitHub https://www.tailwindtoolbox.com/icons -->
       <button
         type="button"
-        class="flex items-center px-4 py-1 ml-2 font-medium shadow-sm hover:shadow bg-yellow-200 rounded-md hover:bg-yellow-300"
+        class="flex items-center px-1 sm:px-4 py-1 ml-2 font-medium shadow-sm hover:shadow bg-yellow-200 rounded-md hover:bg-yellow-300"
         @click="jump()"
       >
         <span>
@@ -104,7 +104,7 @@
   })
 
   // リンク
-  const GitHub = ''
+  const GitHub = 'https://github.com/kensoz/Rrea-client'
   const jump = (): void => {
     window.location.href = GitHub
   }

@@ -134,7 +134,7 @@
   const { bgColorCreator } = useHooks()
 
   // 定数、変数定義
-  // const timer = 10000
+  //const timer = 20000
   let isOnline = ref<boolean>(true)
 
   // form リクエスト
@@ -208,11 +208,11 @@
 
   // 起動の時、form情報を取得
   onMounted(async (): Promise<void> => {
-    await getFormData()
-
     await mitt.on('changeMode', (e: boolean): void => {
       isDark.value = e
     })
+
+    await getFormData()
   })
 </script>
 

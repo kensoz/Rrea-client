@@ -2,12 +2,8 @@
   <!-- メインコンテンツ -->
   <section
     :class="isDark ? 'bg-gray-800' : 'bg-gray-50'"
-    class="grid sm:grid-cols-4 grid-cols-1 gap-3 sm:w-auto w-full h-full sm:p-10 p-5"
+    class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3 sm:w-auto w-full h-full sm:p-10 p-5"
   >
-    <!-- <section
-    :class="isDark ? 'bg-gray-800' : 'bg-gray-50'"
-    class="grid sm:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3 sm:w-auto w-full h-full sm:p-10 p-5"
-  > -->
     <!-- 指定されたユーザーがいない場合 -->
     <div v-if="users.length === 0" class="font-medium text-slate-400">指定されたユーザーがいません</div>
 
@@ -108,12 +104,12 @@
   let isDark = ref<boolean>(false)
 
   onMounted(async (): Promise<void> => {
-    await mitt.on('sendData', (e: IUserSchema[]): void => {
-      users.value = e
-    })
-
     await mitt.on('changeMode', (e: boolean): void => {
       isDark.value = e
+    })
+
+    await mitt.on('sendData', (e: IUserSchema[]): void => {
+      users.value = e
     })
   })
 </script>
