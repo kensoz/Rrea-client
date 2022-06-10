@@ -1,6 +1,9 @@
 <template>
   <!-- ヘーダ -->
-  <section :class="{ 'bg-gray-900': isDark }" class="flex justify-between items-center sm:px-8 px-5 py-4">
+  <section
+    :class="[{ 'bg-gray-900': isDark }, isDark ? 'border-gray-800' : 'border-gray-100']"
+    class="flex justify-between items-center border-b sm:px-8 px-5 py-4"
+  >
     <div class="w-40">
       <img src="/logo.png" alt="logo" />
     </div>

@@ -1,8 +1,8 @@
 <template>
   <!-- フォーム -->
   <section
-    :class="{ 'bg-gray-900': isDark, 'border-b': !isDark, 'border-gray-100': !isDark }"
-    class="flex sm:justify-between sm:flex-row flex-col sm:px-16 px-5 py-3 w-full"
+    :class="[{ 'bg-gray-900': isDark }, isDark ? 'border-gray-700' : 'border-gray-100']"
+    class="flex sm:justify-between sm:flex-row flex-col border-b sm:px-16 px-5 py-3 w-full"
   >
     <!-- フォームオプション start -->
     <div :class="{ 'text-gray-200': isDark }" class="flex-col sm:w-2/3 w-full">
@@ -134,7 +134,6 @@
   const { bgColorCreator } = useHooks()
 
   // 定数、変数定義
-  //const timer = 20000
   let isOnline = ref<boolean>(true)
 
   // form リクエスト
@@ -174,11 +173,6 @@
             })
 
         mitt.emit('sendData', users.value)
-
-        // 自動ポーリングでデータを更新
-        // setTimeout((): void => {
-        //   getBodyData(e)
-        // }, timer)
       })
       .catch((): void => {
         isOnline.value = false
