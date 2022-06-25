@@ -11,7 +11,7 @@
     <template v-for="item in users" :key="item.id">
       <div
         :class="isDark ? 'bg-gray-800' : 'bg-white'"
-        class="flex flex-col rounded-md border border-gray-100 shadow-sm hover:shadow"
+        class="flex flex-col h-min rounded-md border border-gray-100 shadow-sm hover:shadow"
       >
         <!-- バナー start -->
         <div :class="bgColorCreator(Number(item.areaCode))" class="py-1 text-center font-medium">{{ item.area }}</div>
@@ -21,7 +21,7 @@
         <div :class="{ 'text-gray-200': isDark }" class="flex p-1">
           <!-- 写真側 -->
           <div class="flex flex-col w-28 p-2">
-            <img class="block rounded-md" src="/image.png" alt="avatars" />
+            <img class="block rounded-md" :src="item.photo" alt="avatars" />
           </div>
 
           <!-- インフォメーション側 -->
