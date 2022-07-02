@@ -1,9 +1,6 @@
 <template>
   <!-- メインコンテンツ -->
-  <section
-    :class="isDark ? 'bg-gray-800' : 'bg-gray-50'"
-    class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3 sm:w-auto w-full h-full sm:p-10 p-5"
-  >
+  <section class="body-section">
     <!-- 指定されたユーザーがいない場合 -->
     <div v-if="users.length === 0" class="font-medium text-slate-400">指定されたユーザーがいません</div>
 
@@ -20,15 +17,15 @@
         <!-- コンテンツ start -->
         <div :class="{ 'text-gray-200': isDark }" class="flex p-1">
           <!-- 写真側 -->
-          <div class="flex flex-col w-28 p-2">
-            <img class="block rounded-md" :src="item.photo" alt="avatars" />
+          <div class="flex flex-col w-28 min-w-min p-2">
+            <img class="block rounded-md border border-gray-200 h-full" :src="item.photo" alt="avatars" />
           </div>
 
           <!-- インフォメーション側 -->
           <div class="flex flex-col pl-3 pr-2 py-1">
-            <div class="font-medium">ID：{{ item.id }}</div>
+            <div class="font-medium truncate max-w-cs">ID：{{ item.id }}</div>
 
-            <div>
+            <div class="truncate max-w-cs">
               <span class="text-lg font-bold">{{ item.name }}</span>
               <span class="ml-1 text-xs font-bold text-slate-400">{{ item.nameSpell }}</span>
             </div>
@@ -48,7 +45,7 @@
               {{ item.skill }}
             </div>
 
-            <div class="c3-body-subtitle_layout">
+            <div class="text-sm font-medium xl:block lg:hidden md:block sm:block">
               <span class="c3-body-subtitle">利用時間：</span>
               {{ item.YYYYMMDD }} {{ item.HHMMss.substring(0, 5) }}
             </div>
@@ -87,10 +84,10 @@
   import useHooks from '../hooks'
   import mitt from '../script'
 
-  // hooks
+  // ----- use hooks -----
   const { bgColorCreator } = useHooks()
 
-  // back to topボタン
+  // ----- back to topボタン -----
   const scrollTop = (): void => {
     window.scrollTo({
       top: 0,
@@ -98,11 +95,12 @@
     })
   }
 
-  // 起動とデータ取得
-  let users = ref<IUserSchema[]>([])
   // ダークモード
   let isDark = ref<boolean>(false)
 
+  // ----- lifecycle -----
+  // 起動とデータ取得
+  let users = ref<IUserSchema[]>([])
   onMounted(async (): Promise<void> => {
     await mitt.on('changeMode', (e: boolean): void => {
       isDark.value = e
@@ -115,11 +113,19 @@
 </script>
 
 <style scoped>
+  .body-section {
+    @apply grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3 sm:w-auto w-full 2xl:p-10 xl:p-8 lg:p-6 md:p-5 sm:p-2 p-2;
+  }
+
   .c3-body-subtitle {
     @apply text-xs text-slate-400;
   }
 
   .c3-body-subtitle_layout {
-    @apply text-sm font-medium;
+    @apply text-sm font-medium truncate max-w-cs;
+  }
+
+  .max-w-cs {
+    max-width: 9rem;
   }
 </style>

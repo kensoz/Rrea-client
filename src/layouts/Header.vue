@@ -100,21 +100,21 @@
   import { ref, onMounted, watch } from 'vue'
   import mitt from '../script'
 
-  // ダークモード
+  // ----- ダークモード -----
   let isDark = ref<boolean>(false)
   watch(isDark, (): void => {
     mitt.emit('changeMode', isDark.value)
   })
 
-  // リンク
+  // ----- リンク -----
   const GitHub = 'https://github.com/kensoz/Rrea-client'
   const jump = (): void => {
     window.location.href = GitHub
   }
 
-  // 起動とネットワーク状態取得
+  // ----- lifecycle -----
+  // 起動とデータ取得
   let isOnline = ref<boolean>(true)
-
   onMounted((): void => {
     mitt.on('changeNetwork', (e: boolean): void => {
       isOnline.value = e

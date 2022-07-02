@@ -1,2 +1,22 @@
 /* Google fonts: Murecho */
 @import url('https://fonts.googleapis.com/css2?family=Murecho:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* カスタムスクロール */
+/* https://tailwindcss.com/docs/customizing-colors */
+@media (min-width: 992px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #d4d4d4;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #737373;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+  }
+}

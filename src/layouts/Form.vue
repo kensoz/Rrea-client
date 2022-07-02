@@ -81,20 +81,34 @@
         </div>
       </div>
 
-      <!-- オプション -->
+      <!-- ボタンオプション -->
       <div class="c3-form-input_layout">
+        <!-- ソート順 -->
         <button
           type="button"
           class="px-4 py-2 mr-2 shadow-sm hover:shadow text-slate-700 bg-yellow-200 rounded-md hover:bg-yellow-300"
           @click="sort()"
         >
-          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            v-if="isDefaultSort"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
             <path
-              d="M5 12a1 1 0 102 0V6.414l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L5 6.414V12zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
+              d="M3 3a1 1 0 000 2h11a1 1 0 100-2H3zM3 7a1 1 0 000 2h5a1 1 0 000-2H3zM3 11a1 1 0 100 2h4a1 1 0 100-2H3zM13 16a1 1 0 102 0v-5.586l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 101.414 1.414L13 10.414V16z"
+            />
+          </svg>
+
+          <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              d="M3 3a1 1 0 000 2h11a1 1 0 100-2H3zM3 7a1 1 0 000 2h7a1 1 0 100-2H3zM3 11a1 1 0 100 2h4a1 1 0 100-2H3zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
             />
           </svg>
         </button>
 
+        <!-- リセット -->
         <button
           type="button"
           class="px-4 py-2 text-sm font-semibold shadow-sm hover:shadow text-slate-700 bg-yellow-200 rounded-md hover:bg-yellow-300"
@@ -130,15 +144,15 @@
   import mitt from '../script'
   import axios from 'axios'
 
-  // hooks
+  // ----- use hooks -----
   const { bgColorCreator } = useHooks()
 
-  // 定数、変数定義
+  // ----- 定数、変数定義 -----
   let isOnline = ref<boolean>(true)
 
-  // form リクエスト
+  // ----- form  -----
+  // form リクエス
   let forms = reactive({}) as IForms
-
   const getFormData = async (): Promise<void> => {
     await axios
       .get<IFormData>('/api/v1/form')
@@ -151,6 +165,12 @@
       })
   }
 
+  // form リセット
+  const reset = (): void => {
+    Object.assign(params, { areaCode: '', jobCode: [], nameCode: [], raceCode: [] })
+  }
+
+  // ----- data -----
   // data リクエスト
   let counts = ref<ICounts[]>([])
   let users = ref<IUserSchema[]>([])
@@ -180,11 +200,6 @@
       })
   }
 
-  // form リセット
-  const reset = (): void => {
-    Object.assign(params, { areaCode: '', jobCode: [], nameCode: [], raceCode: [] })
-  }
-
   // ソート順
   let isDefaultSort = ref<boolean>(true)
   const sort = (): void => {
@@ -192,15 +207,15 @@
     getBodyData(params)
   }
 
-  // formを監視、変更があればデータを取得
+  // ----- formを監視、変更があればデータを取得 -----
   watchEffect((): void => {
     getBodyData(params)
   })
 
-  // ダークモード
+  // ----- ダークモード -----
   let isDark = ref<boolean>(false)
 
-  // 起動の時、form情報を取得
+  // ----- lifecycle -----
   onMounted(async (): Promise<void> => {
     await mitt.on('changeMode', (e: boolean): void => {
       isDark.value = e

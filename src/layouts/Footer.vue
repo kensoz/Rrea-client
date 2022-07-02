@@ -9,7 +9,7 @@
   import { ref, onMounted } from 'vue'
   import mitt from '../script'
 
-  // ダークモード
+  // ----- ダークモード -----
   let isDark = ref<boolean>(false)
   onMounted(async (): Promise<void> => {
     await mitt.on('changeMode', (e: boolean): void => {
