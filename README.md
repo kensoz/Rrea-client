@@ -1,6 +1,6 @@
 # 🟨 Rrea-Client（C1）
 
-![npm](https://img.shields.io/badge/npm-0.3.0-84CC16.svg?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-0284C7.svg?logo=&style=flat-square)
+![Coverage](https://img.shields.io/badge/Coverage-95%25-84CC16.svg?style=flat-square)  ![npm](https://img.shields.io/badge/npm-0.3.0-84CC16.svg?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-0284C7.svg?logo=&style=flat-square)
 
 Demo:  **[Client]() | [Admin]()**  ・  GitHub:  **[Server](https://github.com/kensoz/Rrea-server) | [Admin](https://github.com/kensoz/Rrea-admin) | [Client-Collection](https://github.com/kensoz/Rrea-client-collection)**
 
@@ -53,3 +53,8 @@ yarn dev
 ```bash
 yarn build
 ```
+
+## 資料
+
++ [エラーコード対照表](https://github.com/kensoz/Rrea-server/blob/master/docs/error.md)
++ [仕様書](https://github.com/kensoz/Rrea-server/blob/master/docs/specification.md)
