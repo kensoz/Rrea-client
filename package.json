@@ -1,14 +1,16 @@
 {
   "name": "rrea-client",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "renhou",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "eslint --fix src/*.{ts,vue} && eslint --fix src/**/*.{ts,vue}"
+    "lint": "eslint --fix src/*.{ts,vue} && eslint --fix src/**/*.{ts,vue}",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "vue": "^3.2.25"
@@ -19,10 +21,13 @@
     "@vitejs/plugin-vue": "^2.2.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
+    "@vue/test-utils": "^2.0.2",
     "autoprefixer": "^10.4.4",
     "axios": "^0.26.1",
+    "c8": "^7.11.3",
     "eslint": "^8.11.0",
     "eslint-plugin-vue": "^8.5.0",
+    "jsdom": "^20.0.0",
     "mitt": "^3.0.0",
     "postcss": "^8.4.12",
     "prettier": "^2.6.0",
@@ -30,6 +35,7 @@
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
     "vite-plugin-compression": "^0.5.1",
+    "vitest": "^0.17.1",
     "vue-tsc": "^0.29.8"
   }
 }
