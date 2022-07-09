@@ -11,6 +11,8 @@ import Body from '../../layouts/Body.vue'
 test('Header', async () => {
   const wrapper = await mount(Header)
   wrapper.get('input').trigger('click')
+  // test plat: desktop
+  expect(wrapper.find('.py-4').exists()).toBe(true)
   // ダークモード
   expect(wrapper.find('.border-gray-100').exists()).toBe(true)
 })
@@ -19,12 +21,22 @@ test('Header', async () => {
 test('Form', async () => {
   const wrapper = await mount(Form)
   wrapper.get('button').trigger('click')
+  // test plat: desktop
+  expect(wrapper.find('.w-full').exists()).toBe(true)
+  // ダークモード
+  expect(wrapper.find('.border-gray-100').exists()).toBe(true)
 })
 
 // Body
 test('Body', async () => {
   const wrapper = await mount(Body)
   expect(wrapper.text()).toContain('指定されたユーザーがいません')
+  // teleport to="body": go to topボタン
+  expect(wrapper.find('.fixed').exists()).toBe(false)
+  // tailwindcss @apply
+  expect(wrapper.find('.grid').exists()).toBe(false)
+  // ダークモード
+  expect(wrapper.find('.text-gray-200').exists()).toBe(false)
 })
 
 // Footer
