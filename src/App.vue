@@ -15,5 +15,5 @@
 <script setup lang="ts">
   import { defineAsyncComponent } from 'vue'
   const Index = defineAsyncComponent(() => import('./page/Index.vue'))
-  import.meta.env.MODE === 'development' ? console.log('dev standing 🚀') : console.log('こんにちは！🙈')
+  import.meta.env.MODE === 'development' ? console.log('Rrea-Client Dev 🚀') : console.log('Rrea-Clientへようこそ！🤣')
 </script>
