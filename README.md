@@ -17,6 +17,7 @@ Demo:  **[Client]() | [Admin]()**  ・  GitHub:  **[Server](https://github.com/k
 + メンバー位置と情報を表示
 + レスポンシブ対応
 + ダークモード
++ Vitestによる自動テスト
 
 
 
