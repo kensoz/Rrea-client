@@ -100,7 +100,7 @@
 
 <script setup lang="ts">
   import { ref, onMounted } from 'vue'
-  import type { IUserSchema } from '../types'
+  import type { IUserSchema } from '../types/Index'
   import useHooks from '../hooks'
   import mitt from '../script'
 

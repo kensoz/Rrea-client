@@ -5,7 +5,7 @@
 // ##############################
 
 import mitt from 'mitt'
-import type { IUserSchema } from '../types'
+import type { IUserSchema } from '../types/Index'
 
 // types
 type Events = {

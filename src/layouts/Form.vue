@@ -139,7 +139,7 @@
 
 <script setup lang="ts">
   import { ref, reactive, onMounted, watchEffect } from 'vue'
-  import type { IForms, IFormData, IParams, ICounts, IUserSchema, IBodyData } from '../types'
+  import type { IForms, IFormData, IParams, ICounts, IUserSchema, IBodyData } from '../types/Index'
   import useHooks from '../hooks'
   import mitt from '../script'
   import axios from 'axios'

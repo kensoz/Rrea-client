@@ -1,11 +1,12 @@
+# ----- Rrea-client -----
 # イメージ指定
-FROM node:16.3.0
+FROM node:18.0.0
 
 # 作者指定
-LABEL maintainer="kensoz"
+LABEL maintainer="renhou"
 
 # ワークスペース指定
-WORKDIR /usr/src/frontend
+WORKDIR /usr/src/Rrea-client
 
 # package.jsonとyarn.lockコピー
 COPY ["package.json", "yarn.lock", "./"]
@@ -23,7 +24,7 @@ RUN yarn build
 FROM nginx:latest
 
 # コンテナ内のビルドしたdistフォルダをnginxへコピー
-COPY --from=0 /usr/src/frontend/dist/ /usr/share/nginx/html/
+COPY --from=0 /usr/src/Rrea-client/dist/ /usr/share/nginx/html/
 
 # nginxコンフィグファイルコピー
 COPY default.conf /etc/nginx/conf.d/default.conf
