@@ -4,12 +4,8 @@ import Footer from '../../layouts/Footer.vue'
 import Header from '../../layouts/Header.vue'
 import Form from '../../layouts/Form.vue'
 import Body from '../../layouts/Body.vue'
-import { forms, users } from './mockData'
+import { forms, users } from './mock/index'
 import axios from 'axios'
-
-// axiosを監視して、モックデータを設定
-vi.spyOn(axios, 'get').mockResolvedValue(forms)
-vi.spyOn(axios, 'post').mockResolvedValue(users)
 
 // ----- 単体テスト -----
 // Header
@@ -26,6 +22,10 @@ test('Header', async () => {
 
 // Form
 test('Form', async () => {
+  // axiosを監視して、モックデータを設定
+  const spyGet = await vi.spyOn(axios, 'get').mockResolvedValue(forms)
+  const spyPost = await vi.spyOn(axios, 'post').mockResolvedValue(users)
+
   const wrapper = await mount(Form)
   // レスポンシブ
   expect(wrapper.find('.w-full').exists()).toBe(true)
@@ -40,12 +40,15 @@ test('Form', async () => {
   expect(axios.post).toHaveBeenCalledWith('/api/v1/data', params)
   // @ts-ignore
   expect(await axios.post().then(res => res)).toBe(users)
+
+  // クリアモック
+  spyGet.mockRestore()
+  spyPost.mockRestore()
 })
 
 // Body
 test('Body', async () => {
   const wrapper = await mount(Body)
-  expect(wrapper.text()).toContain('指定されたユーザーがいません')
   // teleport to="body": go to topボタン
   expect(wrapper.find('.fixed').exists()).toBe(false)
   // tailwindcss @apply
