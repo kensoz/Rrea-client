@@ -11,20 +11,15 @@ on: workflow_dispatch
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    # 実行開始
-      - name: start deploy
-        run: echo Start deploy!
-
-    # SSHでサーバー接続
-      - name: access server
-            uses: appleboy/ssh-action@master
-            with:
-              host: ${{ secrets.TENCENT_UBUNTU_HOST }}
-              username: ${{ secrets.TENCENT_UBUNTU_USERNAME }}
-              password: ${{ secrets.TENCENT_UBUNTU_PASSWORD }}
-              port: ${{ secrets.TENCENT_UBUNTU_PORT }}
-              script: |
-                sudo su root
-                echo "fuck you"
+      # SSHでサーバー接続
+      name: access server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.TENCENT_UBUNTU_HOST }}
+        username: ${{ secrets.TENCENT_UBUNTU_USERNAME }}
+        password: ${{ secrets.TENCENT_UBUNTU_PASSWORD }}
+        port: ${{ secrets.TENCENT_UBUNTU_PORT }}
+        script: |
+          sudo su root
+          echo "fuck you"
