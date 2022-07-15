@@ -1,11 +1,15 @@
-name: remote ssh command
-on: [push]
+# ----- Github Action -----
+name: Rrea-client
+# 実行のタイミング
+on: workflow_dispatch
+# on: [push]
+# 実行の流れ
 jobs:
-  build:
-    name: Build
+  deploy:
+    name: deploy
     runs-on: ubuntu-latest
     steps:
-      - name: executing remote ssh commands using password
+      - name: access server and deploy
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.TENCENT_UBUNTU_HOST }}
