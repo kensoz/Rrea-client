@@ -40,6 +40,20 @@ Demo:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  
 
 
 
+
+
+## ブラウザ対応
+
+ChromeとEdgeのおすすめです！ ✅：Stable  ・  ⚠：Unstable  ・  ❌：Not supported
+
+|         | Chrome | Edge | Safari 10+ |  IE  | Firefox |
+| :-----: | :----: | :--: | :--------: | :--: | :-----: |
+| desktop |   ✅    |  ✅   |     ✅      |  ❌   |    ⚠    |
+| mobile  |   ✅    |  ✅   |     ⚠      |  ❌   |    ✅    |
+| tablet  |   ✅    |  ✅   |     ✅      |  ❌   |    ⚠    |
+
+
+
 ## 使用
 
 ##### インストール
