@@ -1,0 +1,24 @@
+# ----- Github Action -----
+name: Rrea-client
+# 実行のタイミング
+on: workflow_dispatch
+# on: [push]
+# 実行の流れ
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: access server and deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.TENCENT_UBUNTU_HOST }}
+          username: ${{ secrets.TENCENT_UBUNTU_USERNAME }}
+          password: ${{ secrets.TENCENT_UBUNTU_PASSWORD }}
+          port: ${{ secrets.TENCENT_UBUNTU_PORT }}
+          script: |
+            sudo su root
+            cd /root/Desktop/rrea/Rrea-client
+            git pull origin master
+            cd /root/Desktop/rrea
+            docker compose up -d --build
