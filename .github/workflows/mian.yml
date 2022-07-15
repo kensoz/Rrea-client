@@ -18,5 +18,7 @@ jobs:
           port: ${{ secrets.TENCENT_UBUNTU_PORT }}
           script: |
             sudo su root
-            cd /root/Desktop
-            ls
+            cd /root/Desktop/rrea/Rrea-client
+            git pull origin master
+            cd /root/Desktop/rrea
+            docker compose up -d --build
