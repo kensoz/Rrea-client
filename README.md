@@ -7,17 +7,17 @@ Demo:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  
 ##### Rrea-Client とは
 
 メンバー位置と情報の管理システムのフロントエンドです。\
-[APIサーバ(Server](https://github.com/kensoz/Rrea-server))、メンバー用サイト(Client)、[管理者用サイト(Admin)](https://github.com/kensoz/Rrea-admin)にFEとBEを分けている仕組みです。
+[APIサーバ(Server)](https://github.com/kensoz/Rrea-server)、メンバー用サイト(Client)、[管理者用サイト(Admin)](https://github.com/kensoz/Rrea-admin)にFEとBEを分けている仕組みです。
 
 一番使いこなすVue.jsとTailwindCSSで構築し、デフォルトのClientサイトとして公開しましたが、\
-[React.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c2-react18-ts-mui)、[Svelte.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c3-svelte-ts-bulma)、[Pinia.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c4-vue3-ts-quasar)などで開発した[プロジェクト](https://github.com/kensoz/Rrea-client-collection)もありますので。ご覧いただけますと幸いです。
+[React.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c2-react18-ts-mui)、[Svelte.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c3-svelte-ts-bulma)、[Vue.js+Pinia.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c4-vue3-ts-quasar)などで開発した[プロジェクト](https://github.com/kensoz/Rrea-client-collection)もありますので。ご覧いただけますと幸いです。
 
 ##### メイン機能
 
 + メンバー位置と情報を表示
 + レスポンシブ対応
 + ダークモード
-+ Vitestによる自動テスト
++ Vitest、Vue-Test-Utilsによる自動テスト
 
 
 
