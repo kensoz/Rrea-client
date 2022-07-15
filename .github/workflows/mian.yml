@@ -12,4 +12,7 @@ jobs:
           username: ${{ secrets.TENCENT_UBUNTU_USERNAME }}
           password: ${{ secrets.TENCENT_UBUNTU_PASSWORD }}
           port: ${{ secrets.TENCENT_UBUNTU_PORT }}
-          script: echo "fuck yotu"
+          script: |
+            sudo su root
+            cd ~/Desktop/
+            mkdir test
