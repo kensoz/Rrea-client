@@ -116,9 +116,9 @@
   }
 
   // ----- リンク -----
-  const GitHub = ''
+  const admin = 'http://rrea-admin.live'
   const jump = (): void => {
-    window.location.href = GitHub
+    window.location.href = admin
   }
 
   // ダークモード
