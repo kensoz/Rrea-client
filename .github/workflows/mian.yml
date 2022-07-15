@@ -14,5 +14,5 @@ jobs:
           port: ${{ secrets.TENCENT_UBUNTU_PORT }}
           script: |
             sudo su root
-            cd ~/Desktop/
+            cd ~/Desktop
             mkdir test
