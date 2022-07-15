@@ -1,23 +1,30 @@
-# This is a basic workflow to help you get started with Actions
+# ----- Github Action -----
 name: Rrea-client
 
-# Controls when the workflow will run
+# 実行のタイミング
 on: workflow_dispatch
+# pushで実行したい場合は、↓を使う
 #   push:
 #     branches: [ "master" ]
 
+# 実行の流れ
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v3
+    # 実行開始
+      - name: start deploy
+        run: echo Start deploy!
 
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+    # SSHでサーバー接続
+      - name: access server
+            uses: appleboy/ssh-action@master
+            with:
+              host: ${{ secrets.TENCENT_UBUNTU_HOST }}
+              username: ${{ secrets.TENCENT_UBUNTU_USERNAME }}
+              password: ${{ secrets.TENCENT_UBUNTU_PASSWORD }}
+              port: ${{ secrets.TENCENT_UBUNTU_PORT }}
+              script: |
+                sudo su root
+                echo "fuck you"
