@@ -18,5 +18,5 @@ jobs:
           port: ${{ secrets.TENCENT_UBUNTU_PORT }}
           script: |
             sudo su root
-            cd ~/Desktop
-            mkdir test
+            cd ~/Desktop/rrea
+            ls
