@@ -1,6 +1,6 @@
 # 🟨 Rrea-Client（C1）
 
-![Node](https://img.shields.io/badge/Node.js-v18.0.0-fb7185.svg?logo=&style=flat-square)  ![Coverage](https://img.shields.io/badge/Coverage-94.39%25-84CC16.svg?style=flat-square)  ![npm](https://img.shields.io/badge/npm-0.4.0-84CC16.svg?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-0284C7.svg?logo=&style=flat-square)
+![Node](https://img.shields.io/badge/Node.js-v18.0.0-fb7185.svg?logo=&style=flat-square)  ![Coverage](https://img.shields.io/badge/Coverage-94.39%25-84CC16.svg?style=flat-square)  ![npm](https://img.shields.io/badge/npm-1.4.0-84CC16.svg?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-0284C7.svg?logo=&style=flat-square)
 
 Demo:  **[Client]() | [Admin]()**  ・  GitHub:  **[Server](https://github.com/kensoz/Rrea-server) | [Admin](https://github.com/kensoz/Rrea-admin) | [Client-Collection](https://github.com/kensoz/Rrea-client-collection)**
 
@@ -27,10 +27,16 @@ Demo:  **[Client]() | [Admin]()**  ・  GitHub:  **[Server](https://github.com/k
 + ⚙️ TypeScript
 + 🎨 TailwindCSS 3
 + 📑 Eslint + Prettier
-+ 🔌 Vitest（Coverage : **94.39%**）
++ 🔌 Vitest + Vue-Test-Utils（Coverage : **94.39%**）
 + 🏭 Vite
 + 📦 Yarn
 + 🔺 RESTful API
+
+
+
+## システムアーキテクチャー
+
+![system](https://s2.loli.net/2022/07/14/Bwo9ExqbrXy3g8d.jpg)
 
 
 
@@ -62,14 +68,3 @@ yarn build
 yarn test
 ```
 
-
-
-## システムアーキテクチャー
-
-TODO
-
-
-
-## プレビュー
-
-TODO
