@@ -231,7 +231,7 @@
   }
 
   .c3-form-label {
-    @apply pb-0.5 hover:shadow rounded-md hover:bg-yellow-200 peer-checked:bg-yellow-300;
+    @apply pb-0.5 md:hover:shadow rounded-md md:hover:bg-yellow-200 peer-checked:bg-yellow-300;
   }
 
   .c3-form-input_layout {
