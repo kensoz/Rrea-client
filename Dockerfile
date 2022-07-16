@@ -17,8 +17,7 @@ COPY ["dist", "./"]
 # ファイルコピー
 COPY . .
 
-# ビルド
-# RUN yarn build
+
 
 # 次のイメージ指定
 FROM nginx:latest
