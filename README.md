@@ -28,6 +28,7 @@ Demo:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  
 + 🎨 TailwindCSS 3
 + 📑 Eslint + Prettier
 + 🔌 Vitest + Vue-Test-Utils
++ 🔩 GitHub Actions + Codecov
 + 🏭 Vite
 + 📦 Yarn
 + 🔺 RESTful API
