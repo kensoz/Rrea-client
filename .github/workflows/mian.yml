@@ -15,7 +15,7 @@ jobs:
       - name: install Dependencies
         run: npm install
       - name: run Test
-        run: npm run test:coverage
+        run: npx c8 --reporter=lcov npm test && npx codecov
       - name: upload Coverage
         uses: codecov/codecov-action@v1
       # deploy
