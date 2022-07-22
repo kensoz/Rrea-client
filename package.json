@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "lint": "eslint --fix src/*.{ts,vue} && eslint --fix src/**/*.{ts,vue}",
     "test": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "test:codecov": "npx c8 --reporter=lcov npm test && npx codecov"
   },
   "dependencies": {
     "vue": "^3.2.25"
