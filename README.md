@@ -86,6 +86,8 @@ yarn test
 
 
 
-## 資料
+## 資料&関連記事
 
 + [Docker-Compose.yml](https://github.com/kensoz/Rrea-server/blob/master/docs/docker-compose.yml)
++ vs codeでVite3によってVue.js3のTS環境を作成ESLintとPrettierを追加：[Qiita](https://qiita.com/kensoz/items/053c7103cd073d09f81e)
++ VitestによってVueコンポーネント中のAxiosをテスト：[Qiita](https://qiita.com/kensoz/items/cd5bcd644d8ac3fd6774)
