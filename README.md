@@ -6,15 +6,15 @@ Demo:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  
 
 ##### Rrea-Client とは
 
-メンバー位置と情報の管理システムのフロントエンドです。\
-[APIサーバ(Server)](https://github.com/kensoz/Rrea-server)、メンバー用サイト(Client)、[管理者用サイト(Admin)](https://github.com/kensoz/Rrea-admin)にFEとBEを分けている仕組みです。
+メンバー情報管理システムのフロントエンドです。  
+[APIサーバ(Server)](https://github.com/kensoz/Rrea-server)とメンバー用サイト(Client)、[管理者用サイト(Admin)](https://github.com/kensoz/Rrea-admin)にFEとBEを分けている仕組みです。
 
-一番使いこなすVue.jsとTailwindCSSで構築し、デフォルトのClientサイトとして公開しましたが、\
+一番使いこなすVue.jsとTailwindCSSで構築し、デフォルトのClientサイトとして公開しましたが、  
 [React.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c2-react18-ts-mui)、[Svelte.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c3-svelte-ts-bulma)、[Vue.js+Pinia.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c4-vue3-ts-quasar)などで開発した[プロジェクト](https://github.com/kensoz/Rrea-client-collection)もありますので。ご覧いただけますと幸いです。
 
 ##### メイン機能
 
-+ メンバー位置と情報を表示
++ メンバー情報の表示
 + レスポンシブ対応
 + ダークモード
 + Vitest、Vue-Test-Utilsによる自動テスト
@@ -45,8 +45,7 @@ Demo:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  
 
 ## ブラウザ対応
 
-ChromeとEdgeのおすすめです！ \
-✅：Stable  ・  ⚠：Unstable  ・  ❌：Not supported
+✅：Stable  ・  ❌：Not supported
 
 |         | Chrome | Edge | Safari 10+ |  IE  | Firefox |
 | :-----: | :----: | :--: | :--------: | :--: | :-----: |
@@ -89,5 +88,5 @@ yarn test
 ## 資料&関連記事
 
 + [Docker-Compose.yml](https://github.com/kensoz/Rrea-server/blob/master/docs/docker-compose.yml)
-+ vs codeでVite3によってVue.js3のTS環境を作成ESLintとPrettierを追加：[Qiita](https://qiita.com/kensoz/items/053c7103cd073d09f81e)
-+ VitestによってVueコンポーネント中のAxiosをテスト：[Qiita](https://qiita.com/kensoz/items/cd5bcd644d8ac3fd6774)
++ vs codeでVite3によってVue.js3のTS環境を作成ESLintとPrettierを追加：[Qiita](https://qiita.com/kensoz/items/053c7103cd073d09f81e) ・  [掘金](https://juejin.cn/post/7129689902077181960) ・  [思否](https://segmentfault.com/a/1190000042289142)
++ VitestによってVueコンポーネント中のAxiosをテスト：[Qiita](https://qiita.com/kensoz/items/cd5bcd644d8ac3fd6774) ・  [掘金](https://juejin.cn/post/7130069579182637087) ・  [思否](https://segmentfault.com/a/1190000042295748)
