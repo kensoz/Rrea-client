@@ -8,7 +8,7 @@
     <template v-for="item in users" :key="item.id">
       <div
         :class="isDark ? 'bg-gray-800' : 'bg-white'"
-        class="flex flex-col h-min rounded-md border border-gray-100 shadow-sm hover:shadow"
+        class="flex h-min flex-col rounded-md border border-gray-100 shadow-sm hover:shadow"
       >
         <!-- バナー start -->
         <div :class="bgColorCreator(Number(item.areaCode))" class="py-1 text-center font-medium">{{ item.area }}</div>
@@ -17,15 +17,15 @@
         <!-- コンテンツ start -->
         <div :class="{ 'text-gray-200': isDark }" class="flex p-1">
           <!-- 写真側 -->
-          <div class="flex flex-col w-28 min-w-min p-2">
-            <img class="block rounded-md border border-gray-200 h-full" :src="item.photo" alt="avatars" />
+          <div class="flex w-28 min-w-min flex-col p-2">
+            <img class="block h-full rounded-md border border-gray-200" :src="item.photo" alt="avatars" />
           </div>
 
           <!-- インフォメーション側 -->
-          <div class="flex flex-col pl-3 pr-2 py-1">
-            <div class="font-medium truncate max-w-cs">ID：{{ item.id }}</div>
+          <div class="flex flex-col py-1 pl-3 pr-2">
+            <div class="max-w-cs truncate font-medium">ID：{{ item.id }}</div>
 
-            <div class="truncate max-w-cs">
+            <div class="max-w-cs truncate">
               <span class="text-lg font-bold">{{ item.name }}</span>
               <span class="ml-1 text-xs font-bold text-slate-400">{{ item.nameSpell }}</span>
             </div>
@@ -45,7 +45,7 @@
               {{ item.skill }}
             </div>
 
-            <div class="text-sm font-medium xl:block lg:hidden md:block sm:block">
+            <div class="text-sm font-medium sm:block md:block lg:hidden xl:block">
               <span class="c3-body-subtitle">利用時間：</span>
               {{ item.YYYYMMDD }} {{ item.HHMMss.substring(0, 5) }}
             </div>
@@ -61,7 +61,7 @@
     <!-- Adminボタン -->
     <div class="fixed bottom-24 right-6">
       <button
-        class="shadow-sm hover:shadow bg-blue-200 hover:bg-blue-300 p-2 rounded-full"
+        class="rounded-full bg-blue-200 p-2 shadow-sm hover:bg-blue-300 hover:shadow"
         type="button"
         @click="jump()"
       >
@@ -80,7 +80,7 @@
     <!-- go to topボタン -->
     <div class="fixed bottom-10 right-6">
       <button
-        class="shadow-sm hover:shadow bg-yellow-200 hover:bg-yellow-300 p-2 rounded-full"
+        class="rounded-full bg-yellow-200 p-2 shadow-sm hover:bg-yellow-300 hover:shadow"
         type="button"
         @click="scrollTop"
       >
@@ -140,7 +140,7 @@
 
 <style scoped>
   .body-section {
-    @apply grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3 sm:w-auto w-full 2xl:p-10 xl:p-8 lg:p-6 md:p-5 sm:p-2 p-2;
+    @apply grid w-full gap-3 p-2 sm:w-auto sm:grid-cols-1 sm:p-2 md:grid-cols-2 md:p-5 lg:grid-cols-4 lg:p-6 xl:p-8 2xl:p-10;
   }
 
   .c3-body-subtitle {
@@ -148,7 +148,7 @@
   }
 
   .c3-body-subtitle_layout {
-    @apply text-sm font-medium truncate max-w-cs;
+    @apply max-w-cs truncate text-sm font-medium;
   }
 
   .max-w-cs {

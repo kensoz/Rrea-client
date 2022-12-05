@@ -2,7 +2,7 @@
   <!-- ヘーダ -->
   <section
     :class="[{ 'bg-gray-900': isDark }, isDark ? 'border-gray-800' : 'border-gray-100']"
-    class="flex justify-between items-center border-b sm:px-8 px-5 py-4"
+    class="flex items-center justify-between border-b px-5 py-4 sm:px-8"
   >
     <div class="w-40">
       <img src="/logo.png" alt="logo" />
@@ -12,7 +12,7 @@
       <!-- ネットワーク状態 https://heroicons.com/ -->
       <svg
         :class="isOnline ? 'fill-emerald-400' : 'fill-rose-400'"
-        class="h-7 w-7 mt-1 mr-0.5 sm:mr-1"
+        class="mt-1 mr-0.5 h-7 w-7 sm:mr-1"
         fill="none"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@
       <!-- ダークモード -->
       <div>
         <svg
-          class="h-6 w-6 mt-1 fill-amber-400"
+          class="mt-1 h-6 w-6 fill-amber-400"
           fill="none"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -42,22 +42,22 @@
         </svg>
       </div>
 
-      <div class="flex items-center justify-center mr-0.5 sm:mr-1">
-        <label for="toggle" class="flex items-center cursor-pointer">
+      <div class="mr-0.5 flex items-center justify-center sm:mr-1">
+        <label for="toggle" class="flex cursor-pointer items-center">
           <div class="relative">
             <!-- input -->
             <input id="toggle" v-model="isDark" type="checkbox" class="sr-only" />
             <!-- line -->
-            <div class="block bg-slate-700 w-10 h-6 rounded-full" />
+            <div class="block h-6 w-10 rounded-full bg-slate-700" />
             <!-- dot -->
-            <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition" />
+            <div class="dot absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition" />
           </div>
         </label>
       </div>
 
       <div>
         <svg
-          class="h-6 w-6 mt-1 mr-0.5 sm:mr-1 fill-amber-400"
+          class="mt-1 mr-0.5 h-6 w-6 fill-amber-400 sm:mr-1"
           fill="none"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -124,6 +124,6 @@
   }
 
   .c3-btn {
-    @apply flex items-center px-2 sm:px-4 py-1 ml-2 font-medium shadow-sm hover:shadow bg-yellow-200 rounded-md hover:bg-yellow-300;
+    @apply ml-2 flex items-center rounded-md bg-yellow-200 px-2 py-1 font-medium shadow-sm hover:bg-yellow-300 hover:shadow sm:px-4;
   }
 </style>

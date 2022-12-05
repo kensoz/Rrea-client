@@ -8,10 +8,15 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "eslint --fix src/*.{ts,vue} && eslint --fix src/**/*.{ts,vue}",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
-    "test:codecov": "npx c8 --reporter=lcov npm test && npx codecov"
+    "test:codecov": "npx c8 --reporter=lcov npm test && npx codecov",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "js:check": "eslint src/*.{ts,vue} && eslint src/**/*.{ts,vue}",
+    "js:fix": "eslint --fix src/*.{ts,vue} && eslint --fix src/**/*.{ts,vue}",
+    "editorconfig:check": "editorconfig-checker",
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "vue": "^3.2.25"
@@ -26,17 +31,23 @@
     "autoprefixer": "^10.4.7",
     "axios": "^0.26.1",
     "c8": "^7.11.3",
+    "editorconfig-checker": "^4.0.2",
     "eslint": "^8.11.0",
     "eslint-plugin-vue": "^8.5.0",
     "jsdom": "^20.0.0",
     "mitt": "^3.0.0",
     "postcss": "^8.4.12",
-    "prettier": "^2.6.0",
+    "prettier": "^2.8.0",
+    "prettier-plugin-tailwindcss": "^0.2.0",
+    "simple-git-hooks": "^2.8.1",
     "tailwindcss": "^3.0.23",
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
     "vite-plugin-compression": "^0.5.1",
     "vitest": "^0.17.1",
     "vue-tsc": "^0.29.8"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx prettier --write ."
   }
 }

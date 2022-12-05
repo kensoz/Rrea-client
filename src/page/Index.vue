@@ -1,6 +1,6 @@
 <template>
   <!-- インデックス -->
-  <main class="flex flex-col h-screen font-murecho text-slate-700">
+  <main class="flex h-screen flex-col font-murecho text-slate-700">
     <header>
       <Header />
     </header>

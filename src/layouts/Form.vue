@@ -2,31 +2,31 @@
   <!-- フォーム -->
   <section
     :class="[{ 'bg-gray-900': isDark }, isDark ? 'border-gray-700' : 'border-gray-100']"
-    class="flex sm:justify-between sm:flex-row flex-col border-b sm:px-16 px-5 py-3 w-full"
+    class="flex w-full flex-col border-b px-5 py-3 sm:flex-row sm:justify-between sm:px-16"
   >
     <!-- フォームオプション start -->
-    <div :class="{ 'text-gray-200': isDark }" class="flex-col sm:w-2/3 w-full">
+    <div :class="{ 'text-gray-200': isDark }" class="w-full flex-col sm:w-2/3">
       <!-- 場所選択 -->
       <div class="c3-form-input_layout">
         <div class="c3-form-title">場所：</div>
         <div class="relative">
           <select
             v-model="params.areaCode"
-            class="text-slate-700 font-medium block appearance-none ml-3 w-52 border-2 border-slate-400 pb-1 pl-4 pr-10 rounded-md focus:outline-none focus:border-yellow-300"
+            class="ml-3 block w-52 appearance-none rounded-md border-2 border-slate-400 pb-1 pl-4 pr-10 font-medium text-slate-700 focus:border-yellow-300 focus:outline-none"
           >
-            <option class="text-slate-700 font-medium hover:bg-yellow-200" value="" selected>全場所</option>
+            <option class="font-medium text-slate-700 hover:bg-yellow-200" value="" selected>全場所</option>
             <option
               v-for="item in forms.area"
               :key="item.value"
               :value="item.value"
-              class="text-slate-700 font-medium hover:bg-yellow-200"
+              class="font-medium text-slate-700 hover:bg-yellow-200"
             >
               {{ item.text }}
             </option>
           </select>
 
           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-700">
-            <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <svg class="h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
               <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
             </svg>
           </div>
@@ -40,12 +40,12 @@
           <input
             :id="item.text"
             v-model="params.nameCode"
-            class="hidden peer"
+            class="peer hidden"
             name="name"
             type="checkbox"
             :value="item.value"
           />
-          <label :for="item.text" class="ml-1 px-2 c3-form-label">{{ item.text }}</label>
+          <label :for="item.text" class="c3-form-label ml-1 px-2">{{ item.text }}</label>
         </div>
       </div>
 
@@ -56,12 +56,12 @@
           <input
             :id="item.text"
             v-model="params.jobCode"
-            class="hidden peer"
+            class="peer hidden"
             name="job"
             type="checkbox"
             :value="item.value"
           />
-          <label :for="item.text" class="px-3 c3-form-label">{{ item.text }}</label>
+          <label :for="item.text" class="c3-form-label px-3">{{ item.text }}</label>
         </div>
       </div>
 
@@ -72,12 +72,12 @@
           <input
             :id="item.text"
             v-model="params.raceCode"
-            class="hidden peer"
+            class="peer hidden"
             name="race"
             type="checkbox"
             :value="item.value"
           />
-          <label :for="item.text" class="px-3 c3-form-label"> {{ item.text }} </label>
+          <label :for="item.text" class="c3-form-label px-3"> {{ item.text }} </label>
         </div>
       </div>
 
@@ -86,7 +86,7 @@
         <!-- ソート順 -->
         <button
           type="button"
-          class="px-4 py-2 mr-2 shadow-sm hover:shadow text-slate-700 bg-yellow-200 rounded-md hover:bg-yellow-300"
+          class="mr-2 rounded-md bg-yellow-200 px-4 py-2 text-slate-700 shadow-sm hover:bg-yellow-300 hover:shadow"
           @click="sort()"
         >
           <svg
@@ -111,7 +111,7 @@
         <!-- リセット -->
         <button
           type="button"
-          class="px-4 py-2 text-sm font-semibold shadow-sm hover:shadow text-slate-700 bg-yellow-200 rounded-md hover:bg-yellow-300"
+          class="rounded-md bg-yellow-200 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm hover:bg-yellow-300 hover:shadow"
           @click="reset()"
         >
           リセット
@@ -121,11 +121,11 @@
     <!-- フォームオプション end -->
 
     <!-- 場所インフォメーション start -->
-    <div class="grid grid-cols-3 gap-1 sm:w-44 w-full h-28 sm:py-0 py-3">
+    <div class="grid h-28 w-full grid-cols-3 gap-1 py-3 sm:w-44 sm:py-0">
       <template v-for="item in counts" :key="item.area">
         <div
           :class="bgColorCreator(item.value)"
-          class="pt-2 px-2 rounded-md font-medium text-sm text-center shadow-sm hover:shadow"
+          class="rounded-md px-2 pt-2 text-center text-sm font-medium shadow-sm hover:shadow"
         >
           {{ item.area }}
           <br />
@@ -227,14 +227,14 @@
 
 <style scoped>
   .c3-form-title {
-    @apply sm:mr-3 mr-0 sm:basis-auto basis-full sm:mb-0 mb-2 text-sm text-slate-400;
+    @apply mr-0 mb-2 basis-full text-sm text-slate-400 sm:mr-3 sm:mb-0 sm:basis-auto;
   }
 
   .c3-form-label {
-    @apply pb-0.5 md:hover:shadow rounded-md md:hover:bg-yellow-200 peer-checked:bg-yellow-300;
+    @apply rounded-md pb-0.5 peer-checked:bg-yellow-300 md:hover:bg-yellow-200 md:hover:shadow;
   }
 
   .c3-form-input_layout {
-    @apply flex flex-row flex-wrap  my-2 items-center font-medium;
+    @apply my-2 flex flex-row  flex-wrap items-center font-medium;
   }
 </style>
