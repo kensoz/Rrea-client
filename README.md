@@ -1,6 +1,6 @@
 # 🟨 Rrea-Client（C1）
 
-![Node](https://img.shields.io/badge/Node.js-v18.0.0-fb7185.svg?logo=&style=flat-square)  [![codecov](https://codecov.io/gh/kensoz/Rrea-client/branch/master/graph/badge.svg?token=1V4VML2KMK)](https://codecov.io/gh/kensoz/Rrea-client)  ![npm](https://img.shields.io/badge/npm-2.0.0-84CC16.svg?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-0284C7.svg?logo=&style=flat-square)
+![github](https://github.com/kensoz/Rrea-client/actions/workflows/mian.yml/badge.svg)  [![codecov](https://codecov.io/gh/kensoz/Rrea-client/branch/master/graph/badge.svg?token=1V4VML2KMK)](https://codecov.io/gh/kensoz/Rrea-client)  ![Node](https://img.shields.io/badge/Node.js-v18.0.0-fb7185.svg?logo=&style=flat-square)  ![npm](https://img.shields.io/badge/npm-2.0.0-84CC16.svg?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-0284C7.svg?logo=&style=flat-square)
 
 Site:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  ・  GitHub:  **[Server](https://github.com/kensoz/Rrea-server) | [Admin](https://github.com/kensoz/Rrea-admin) | [Client-Collection](https://github.com/kensoz/Rrea-client-collection)**
 
