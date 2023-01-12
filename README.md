@@ -4,7 +4,7 @@
 
 Site:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  ・  GitHub:  **[Server](https://github.com/kensoz/Rrea-server) | [Admin](https://github.com/kensoz/Rrea-admin) | [Client-Collection](https://github.com/kensoz/Rrea-client-collection)**
 
-##### Rrea-Client とは
+## Rrea-Client とは
 
 メンバー情報管理システムのフロントエンドです。  
 [APIサーバ(Server)](https://github.com/kensoz/Rrea-server)とメンバー用サイト(Client)、[管理者用サイト(Admin)](https://github.com/kensoz/Rrea-admin)にFEとBEを分けている仕組みです。
@@ -12,7 +12,7 @@ Site:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  
 一番使いこなすVue.jsとTailwindCSSで構築し、デフォルトのClientサイトとして公開しましたが、  
 [React.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c2-react18-ts-mui)、[Svelte.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c3-svelte-ts-bulma)、[Vue.js+Pinia.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c4-vue3-ts-quasar)などで開発した[プロジェクト](https://github.com/kensoz/Rrea-client-collection)もありますので、ご覧いただけますと幸いです。
 
-##### メイン機能
+## メイン機能
 
 + メンバー情報の表示
 + レスポンシブ対応
