@@ -2,13 +2,14 @@
 
 ![github](https://github.com/kensoz/Rrea-client/actions/workflows/mian.yml/badge.svg)  [![codecov](https://codecov.io/gh/kensoz/Rrea-client/branch/master/graph/badge.svg?token=1V4VML2KMK)](https://codecov.io/gh/kensoz/Rrea-client)  ![Node](https://img.shields.io/badge/Node.js-v18.0.0-fb7185.svg?logo=&style=flat-square)  ![npm](https://img.shields.io/badge/npm-2.0.0-84CC16.svg?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-0284C7.svg?logo=&style=flat-square)
 
-Site:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  ・  GitHub:  **[Server](https://github.com/kensoz/Rrea-server) | [Admin](https://github.com/kensoz/Rrea-admin) | [Client-Collection](https://github.com/kensoz/Rrea-client-collection)**
+Site:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  ・  GitHub:  **[Server](https://github.com/kensoz/Rrea-server) | [Admin](https://github.com/kensoz/Rrea-admin)
 
 ## Rrea-Client とは
 
 メンバー情報管理システムのフロントエンドです。  
 [APIサーバ(Server)](https://github.com/kensoz/Rrea-server)とメンバー用サイト(Client)、[管理者用サイト(Admin)](https://github.com/kensoz/Rrea-admin)にFEとBEを分けている仕組みです。
 
+<!--
 一番使いこなすVue.jsとTailwindCSSで構築し、デフォルトのClientサイトとして公開しましたが、  
 [React.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c2-react18-ts-mui)、[Svelte.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c3-svelte-ts-bulma)、[Vue.js+Pinia.js](https://github.com/kensoz/Rrea-client-collection/tree/master/c4-vue3-ts-quasar)などで開発した[プロジェクト](https://github.com/kensoz/Rrea-client-collection)もありますので、ご覧いただけますと幸いです。
 
@@ -19,6 +20,18 @@ Site:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  
 + ダークモード
 + Vitest、Vue-Test-Utilsによる自動テスト
 
+## ブラウザ対応
+
+✅：Stable  ・  ❌：Not supported
+
+|         | Chrome | Edge | Safari 10+ |  IE  | Firefox |
+| :-----: | :----: | :--: | :--------: | :--: | :-----: |
+| desktop |   ✅    |  ✅   |     ✅      |  ❌   |    ✅    |
+| mobile  |   ✅    |  ✅   |     ✅      |  ❌   |    ✅    |
+| tablet  |   ✅    |  ✅   |     ✅      |  ❌   |    ✅    |
+
+
+-->
 
 
 ## スタック
@@ -38,20 +51,6 @@ Site:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  
 ## システムアーキテクチャー
 Cloud service：Tencent Cloud
 ![system](https://s2.loli.net/2022/07/16/Y7BqVkciA9MCLQZ.jpg)
-
-
-
-
-
-## ブラウザ対応
-
-✅：Stable  ・  ❌：Not supported
-
-|         | Chrome | Edge | Safari 10+ |  IE  | Firefox |
-| :-----: | :----: | :--: | :--------: | :--: | :-----: |
-| desktop |   ✅    |  ✅   |     ✅      |  ❌   |    ✅    |
-| mobile  |   ✅    |  ✅   |     ✅      |  ❌   |    ✅    |
-| tablet  |   ✅    |  ✅   |     ✅      |  ❌   |    ✅    |
 
 
 
