@@ -2,9 +2,10 @@
 
 ![github](https://github.com/kensoz/Rrea-client/actions/workflows/mian.yml/badge.svg)  [![codecov](https://codecov.io/gh/kensoz/Rrea-client/branch/master/graph/badge.svg?token=1V4VML2KMK)](https://codecov.io/gh/kensoz/Rrea-client)  ![Node](https://img.shields.io/badge/Node.js-v18.0.0-fb7185.svg?logo=&style=flat-square)  ![npm](https://img.shields.io/badge/npm-2.0.0-84CC16.svg?style=flat-square)  ![License](https://img.shields.io/badge/License-MIT-0284C7.svg?logo=&style=flat-square)
 
-Site（現時点公開停止中）:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  ・  GitHub:  **[Server](https://github.com/kensoz/Rrea-server) | [Admin](https://github.com/kensoz/Rrea-admin)**
+<!-- Site（現時点公開停止中）:  **[Client](http://rrea-client.live) | [Admin](http://rrea-admin.live)**  ・   -->
+GitHub:  **[Server](https://github.com/kensoz/Rrea-server) | [Admin](https://github.com/kensoz/Rrea-admin)**
 
-## Rrea-Client とは
+<!--## Rrea-Client とは
 
 メンバー情報管理システムのフロントエンドです。  
 [APIサーバ(Server)](https://github.com/kensoz/Rrea-server)とメンバー用サイト(Client)、[管理者用サイト(Admin)](https://github.com/kensoz/Rrea-admin)にFEとBEを分けている仕組みです。
@@ -49,7 +50,7 @@ Site（現時点公開停止中）:  **[Client](http://rrea-client.live) | [Admi
 
 
 ## システムアーキテクチャー
-Cloud service：Tencent Cloud
+
 ![system](https://s2.loli.net/2022/07/16/Y7BqVkciA9MCLQZ.jpg)
 
 
